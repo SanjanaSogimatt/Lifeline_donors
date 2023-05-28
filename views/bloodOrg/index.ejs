@@ -1,0 +1,27 @@
+<%- include('../partials/navbar') %>
+
+    <h1 class="text-center">List of all donors</h1>
+    <div class="row">
+        <div class="col-6 offset-3">
+            <div class="card mt-5 mb-3">
+                <div class="card-body">
+    <% for(donor of donors){ %>
+        
+        <h3 class="card-text fs-5"><span class="card-subtitle fs-5">Name:</span>  <%= donor.name %></h3>
+        <h3 class="card-text fs-5">Address: <%= donor.address %></h3>
+        <h3 class="card-text fs-5">Blood Group: <%= donor.blood_group %></h3>
+        <h3 class="card-text fs-5">City: <%= donor.city %></h3>
+        <form action="/community/<%=donor._id%>?_method=DELETE" method="POST">
+            <button class="btn btn-danger m-2">Delete</button>
+        </form>
+        <% } %>
+        
+        <a href="/community/new" class="btn btn-danger mt-3">Want to become a donor?</a>
+        <a href="/community/request" class="btn btn-info mt-3">Want to make a request?</a>
+        <a href="/community/bloodbank" class="btn btn-success mt-3">Get to your nearest blood bank</a>
+    </div>
+    </div>
+    </div>
+    </div>
+</body>
+</html>

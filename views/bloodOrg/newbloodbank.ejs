@@ -1,0 +1,18 @@
+<%- include('../partials/navbar') %>
+<div class="row">
+    <div class="col-6 offset-3">
+    <h1 class="text-center">Register your blood bank</h1>
+    <form action="/community/bloodbank" method="post">
+        <label for="name" class="form-label">Name: </label>
+        <input type="text" placeholder=" Name" id="name" name="bloodbank[name]" class="form-control"  required>
+        <label for="email" class="form-label">Email: </label>
+    <input type="text" placeholder=" Email" name="bloodbank[email]" class="form-control"  required>
+    <label for="phone" class="form-label">Phone: </label>
+    <input type="tel" id="phone" name="bloodbank[phone]" class="form-control"  required>
+    <label for="address" class="form-label">Address:</label>
+    <input type="text" name="bloodbank[address]" placeholder=" Address" class="form-control"  required>
+        <button type="submit" class="btn btn-info mt-3">Create</button>
+    </form>
+</div>
+</div>
+    <%- include('../partials/footer') %>
