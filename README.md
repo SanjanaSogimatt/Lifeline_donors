@@ -13,12 +13,16 @@ Git: Download Git
 Getting Started
 
 1. Clone the repo
+   
    git clone https://github.com/your-username/lifeline-donors.git
-2. Naviagte to the dir
+3. Naviagte to the dir
+   
    cd lifeline-donors
-3. Install dependices
+4. Install dependices
+   
    npm install
-4. Start the application
+6. Start the application
+   
    npm start
 
 License
